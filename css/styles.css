@@ -1,0 +1,110 @@
+/* === Base Styles === */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eed9c4; /* Light beige background */
+}
+
+/* === Message Bar === */
+.message-bar {
+    background-color: #1d8742;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.message-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.message-bar a:hover {
+    text-decoration: underline;
+}
+
+/* === Navbar === */
+.navbar {
+    background-color: #5c4033; /* Brown navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+/* === Logo and Brand === */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo Image */
+.nav-logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Brand Name Block */
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    line-height: 0.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Name */
+.brand-name .main-name {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'DM Serif Text', serif;
+    margin: 0;
+}
+
+/* Sub Name */
+.brand-name .sub-name {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2px; 
+    margin-bottom: 0;
+}
+
+/* === Navigation Menu === */
+.nav-menu {
+    font-family: 'Merriweather', serif;
+    font-weight: lighter;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    display: block;
+    font-size: 16px;
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+/* === Footer === */
+.site-footer {
+    background-color: #5c4033; /* Same brown as navbar */
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
