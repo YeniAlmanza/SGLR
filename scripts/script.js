@@ -52,3 +52,31 @@ document.querySelectorAll('.image-slider').forEach(slider => {
     document.addEventListener('touchend', stopDrag);
 });
 
+    //Scroll effect
+    const sections = document.querySelectorAll('.fade-in-section');
+
+    function revealOnScroll() {
+        const triggerBottom = window.innerHeight * 0.9;
+
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const sectionBottom = section.getBoundingClientRect().bottom;
+
+            // Reveal only the first time it's visible in viewport
+            if (
+                sectionTop < triggerBottom &&
+                sectionBottom > 0 &&
+                !section.classList.contains('visible')
+            ) {
+                section.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+
+    
+
+
