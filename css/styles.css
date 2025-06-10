@@ -519,6 +519,83 @@ body {
     left: 100%;
 }
 
+/* === Our Story === */
+.story-title {
+    font-family: 'Merriweather', serif;
+    color: #1d8742;
+    font-size: 32px;
+}
+.story {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.story h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    color: #1d8742; 
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.story p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #5a4033;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 900px;
+}
+
+/* === Team === */
+.team h2{
+    font-family:'Merriweather', serif;
+    margin: 20px;
+    font-size: 32px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.team-pic img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.team-caption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    text-align: left;
+    color: #555;
+}
+
+
 /* === Footer === */
 .site-footer {
     background-color: #5c4033;
