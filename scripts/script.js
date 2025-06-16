@@ -77,6 +77,19 @@ document.querySelectorAll('.image-slider').forEach(slider => {
     window.addEventListener('load', revealOnScroll);
 
 
+    // card scrolling
+    function scrollCarousel(section, direction) {
+        const track = document.getElementById(`carousel-${section}`);
+        const card = track.querySelector('.service-card');
+        if (!card) return;
     
-
-
+        const cardStyle = window.getComputedStyle(card);
+        const cardWidth = card.offsetWidth + parseFloat(cardStyle.marginRight) + parseFloat(cardStyle.marginLeft);
+    
+        const scrollAmount = cardWidth * 6; // scroll 6 cards at a time
+    
+        track.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+        });
+    }
