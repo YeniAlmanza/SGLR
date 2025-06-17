@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Poppins:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     </head>
     <body>
         <!-- Message Bar -->
@@ -250,11 +251,48 @@
                     <button class="carousel-btn right" onclick="scrollCarousel('remodel', 1)">&#10095;</button>
                     </div>
                 </section>
+                
+                <!-- nService Area-->
+                <section id="service-area">
+                  <h2>Service Area</h2>
+                  <div class="service-container">
+                    <div id="map"></div>
+                    <div class="locations-list">
+                      <h3>We proudly serve:</h3>
+                      <ul>
+                        <li data-city="Douglasville, GA">Douglasville, GA</li>
+                        <li data-city="Atlanta, GA">Atlanta, GA</li>
+                        <li data-city="Marietta, GA">Marietta, GA</li>
+                        <li data-city="Newnan, GA">Newnan, GA</li>
+                        <li data-city="Carrollton, GA">Carrollton, GA</li>
+                        <li data-city="Villa Rica, GA">Villa Rica, GA</li>
+                        <li data-city="Dallas, GA">Dallas, GA</li>
+                        <li data-city="Union City, GA">Union City, GA</li>
+                        <li data-city="Fairburn, GA">Fairburn, GA</li>
+                        <li data-city="Smyrna, GA">Smyrna, GA</li>
+                        <li data-city="Powder Springs, GA">Powder Springs, GA</li>
+                        <li>And more...</li>
+                      </ul>                      
+                    </div>
+                  </div>
+                </section>
+                
         </main>
-        
+                <!--  CTA SECTION -->
+        <section class="cta-section fade-in-section">
+            <div class="cta-content">
+                <h2 class="cta-heading">Let's Upgrade Your Kitchen, Bath, or More</h2>
+                <h3 class="cta-subheading">CALL US NOW!</h3>
+                <a href="contact.html" class="cta-button">Contact</a>
+            </div>
+        </section>
+
         <footer class="site-footer">
             <p>&copy; 2025 Shar'on Garden Landscaping and Renovations. All rights reserved.</p>
         </footer> 
-        <script src="scripts/script.js"></script>       
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="scripts/leaflet.js"></script>
+        <script src="scripts/script.js"></script>
+      
     </body>
 </html>

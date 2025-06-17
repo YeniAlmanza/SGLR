@@ -1,107 +1,102 @@
-//Before and After slider
+// === Before and After Image Slider ===
 document.querySelectorAll('.image-slider').forEach(slider => {
     const before = slider.querySelector('.before');
     const handle = slider.querySelector('.slider-handle');
-
+  
     let isDragging = false;
-
+  
     const updateSlider = (clientX) => {
-        const rect = slider.getBoundingClientRect();
-        let x = clientX - rect.left;
-        x = Math.max(0, Math.min(x, rect.width));
-        const percent = (x / rect.width) * 100;
-        before.style.width = percent + '%';
-        handle.style.left = percent + '%';
+      const rect = slider.getBoundingClientRect();
+      let x = clientX - rect.left;
+      x = Math.max(0, Math.min(x, rect.width));
+      const percent = (x / rect.width) * 100;
+      before.style.width = percent + '%';
+      handle.style.left = percent + '%';
     };
-
+  
     const startDrag = (e) => {
-        isDragging = true;
-        handle.classList.add('dragging');
-        // For mouse events, e.clientX, for touch, e.touches[0].clientX
-        const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
-        updateSlider(clientX);
-        e.preventDefault(); // prevent text selection and scrolling
+      isDragging = true;
+      handle.classList.add('dragging');
+      const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+      updateSlider(clientX);
+      e.preventDefault();
     };
-
+  
     const drag = (e) => {
-        if (!isDragging) return;
-        const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
-        updateSlider(clientX);
-        e.preventDefault();
+      if (!isDragging) return;
+      const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+      updateSlider(clientX);
+      e.preventDefault();
     };
-
+  
     const stopDrag = (e) => {
-        if (!isDragging) return;
-        isDragging = false;
-        handle.classList.remove('dragging');
-        e.preventDefault();
+      if (!isDragging) return;
+      isDragging = false;
+      handle.classList.remove('dragging');
+      e.preventDefault();
     };
-
-    // Start dragging on handle or anywhere in slider container
+  
     handle.addEventListener('mousedown', startDrag);
     slider.addEventListener('mousedown', startDrag);
     handle.addEventListener('touchstart', startDrag);
     slider.addEventListener('touchstart', startDrag);
-
-    // Listen for move on document (to follow cursor outside slider)
+  
     document.addEventListener('mousemove', drag);
     document.addEventListener('touchmove', drag, { passive: false });
-
-    // Listen for mouseup/touchend anywhere to stop dragging
+  
     document.addEventListener('mouseup', stopDrag);
     document.addEventListener('touchend', stopDrag);
-});
-
-    //Scroll effect
-    const sections = document.querySelectorAll('.fade-in-section');
-
-    function revealOnScroll() {
-        const triggerBottom = window.innerHeight * 0.9;
-
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const sectionBottom = section.getBoundingClientRect().bottom;
-
-            // Reveal only the first time it's visible in viewport
-            if (
-                sectionTop < triggerBottom &&
-                sectionBottom > 0 &&
-                !section.classList.contains('visible')
-            ) {
-                section.classList.add('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-
-
-// card scrolling with responsive behavior
-function scrollCarousel(section, direction) {
+  });
+  
+  // === Scroll Reveal Effect ===
+  const sections = document.querySelectorAll('.fade-in-section');
+  
+  function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.9;
+  
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionBottom = section.getBoundingClientRect().bottom;
+  
+      if (
+        sectionTop < triggerBottom &&
+        sectionBottom > 0 &&
+        !section.classList.contains('visible')
+      ) {
+        section.classList.add('visible');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+  
+  // === Carousel Scroll Functionality ===
+  function scrollCarousel(section, direction) {
     const track = document.getElementById(`carousel-${section}`);
-    const card = track.querySelector('.service-card');
+    const card = track ? track.querySelector('.service-card') : null;
     if (!card) return;
-
+  
     const cardStyle = window.getComputedStyle(card);
-    const cardWidth = card.offsetWidth +
-                      parseFloat(cardStyle.marginRight || 0) +
-                      parseFloat(cardStyle.marginLeft || 0);
-
-    // Determine number of cards to scroll based on screen width
+    const cardWidth =
+      card.offsetWidth +
+      parseFloat(cardStyle.marginRight || 0) +
+      parseFloat(cardStyle.marginLeft || 0);
+  
     let cardsPerScroll;
     if (window.innerWidth <= 600) {
-        cardsPerScroll = 1; // mobile
+      cardsPerScroll = 1; // mobile
     } else if (window.innerWidth <= 900) {
-        cardsPerScroll = 3; // tablet/small laptop
+      cardsPerScroll = 3; // tablet/small laptop
     } else {
-        cardsPerScroll = 5; // desktop
+      cardsPerScroll = 5; // desktop
     }
-
+  
     const scrollAmount = cardWidth * cardsPerScroll;
-
+  
     track.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
+      left: direction * scrollAmount,
+      behavior: 'smooth',
     });
-}
+  }
+  

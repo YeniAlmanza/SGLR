@@ -433,7 +433,6 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
-    margin-top: 50px;
 }
 
 .cta-section::before {
@@ -619,7 +618,7 @@ body {
 
 .service-category h2 {
   font-size: 1.8rem;
-  color: #1d8742;
+  color: #5c4033;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -711,6 +710,45 @@ body {
 .carousel-btn.right {
     right: 0;
 }
+
+/* === Service Area === */
+#service-area {
+    padding: 40px;
+    background-color: #f9f9f9;
+    color: #1d8742;
+  }
+  
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  #map {
+    height: 400px;
+    flex: 1 1 60%;
+    min-width: 300px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .locations-list {
+    flex: 1 1 35%;
+    min-width: 250px;
+  }
+  
+  .locations-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  .locations-list li[data-city] {
+    cursor: pointer;
+  }
+  
+  .locations-list li[data-city]:hover {
+    text-decoration: underline;
+  }
 
 /* === Footer === */
 .site-footer {
