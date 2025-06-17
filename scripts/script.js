@@ -77,19 +77,31 @@ document.querySelectorAll('.image-slider').forEach(slider => {
     window.addEventListener('load', revealOnScroll);
 
 
-    // card scrolling
-    function scrollCarousel(section, direction) {
-        const track = document.getElementById(`carousel-${section}`);
-        const card = track.querySelector('.service-card');
-        if (!card) return;
-    
-        const cardStyle = window.getComputedStyle(card);
-        const cardWidth = card.offsetWidth + parseFloat(cardStyle.marginRight) + parseFloat(cardStyle.marginLeft);
-    
-        const scrollAmount = cardWidth * 6; // scroll 6 cards at a time
-    
-        track.scrollBy({
-            left: direction * scrollAmount,
-            behavior: 'smooth'
-        });
+// card scrolling with responsive behavior
+function scrollCarousel(section, direction) {
+    const track = document.getElementById(`carousel-${section}`);
+    const card = track.querySelector('.service-card');
+    if (!card) return;
+
+    const cardStyle = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth +
+                      parseFloat(cardStyle.marginRight || 0) +
+                      parseFloat(cardStyle.marginLeft || 0);
+
+    // Determine number of cards to scroll based on screen width
+    let cardsPerScroll;
+    if (window.innerWidth <= 600) {
+        cardsPerScroll = 1; // mobile
+    } else if (window.innerWidth <= 900) {
+        cardsPerScroll = 3; // tablet/small laptop
+    } else {
+        cardsPerScroll = 5; // desktop
     }
+
+    const scrollAmount = cardWidth * cardsPerScroll;
+
+    track.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+}

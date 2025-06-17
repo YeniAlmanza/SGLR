@@ -764,6 +764,10 @@ body {
         padding: 14px 32px;
         font-size: 20px;
     }
+
+    .service-card {
+        width: 30%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -807,5 +811,31 @@ body {
 
     .cta-content {
         padding: 0 10px;
+    }
+
+    .service-card {
+        width: 70%; 
+    }
+
+    .carousel-btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 18px;
+    }
+
+    .service-card img {
+        height: 130px;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    .quote-btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
     }
 }
