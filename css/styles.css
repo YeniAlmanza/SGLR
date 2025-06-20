@@ -810,7 +810,83 @@ body {
 .card:hover {
     transform: scale(1.05);
 }
+/* === Back button === */
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #1d8742;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+  
+.back-button:hover {
+    background-color: #166c35;
+}
 
+/* === Plant Gallery === */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-gallery img {
+    max-width: 250px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+  
 
 /* === Footer === */
 .site-footer {
@@ -867,6 +943,25 @@ body {
 
     .service-card {
         width: 30%;
+    }
+    .image-gallery {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .image-gallery img {
+        max-width: 90%;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .close-btn {
+        top: 20px;
+        right: 25px;
+        font-size: 32px;
     }
 }
 
@@ -937,5 +1032,63 @@ body {
     .quote-btn {
         font-size: 0.9rem;
         padding: 0.4rem 1rem;
+    }
+
+    .gallery-page {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .category h2 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    .image-gallery {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .image-gallery img {
+        width: 90%;
+        max-width: 350px;
+        border-radius: 8px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 65vh;
+    }
+
+    .close-btn {
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+    }
+
+    .back-button {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        padding: 12px 24px;
+        font-size: 16px;
     }
 }
