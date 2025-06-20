@@ -99,28 +99,24 @@ document.querySelectorAll('.image-slider').forEach(slider => {
       behavior: 'smooth',
     });
   }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
-    const closeBtn = document.getElementById("closeModal");
-    const images = document.querySelectorAll(".clickable-image");
-
-    images.forEach(function (img) {
-        img.addEventListener('click', function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-        });
-    });
-
-    closeBtn.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    modal.onclick = function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    }
-});
+  // === Hamburger Menu Toggle ===
+    document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
   
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+  
+      // Close menu when a nav link is clicked
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+    }
+  });

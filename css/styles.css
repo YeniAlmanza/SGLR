@@ -57,6 +57,20 @@ body {
     flex-wrap: wrap;
 }
 
+/* === Hamburger Menu === */
+.hamburger {
+    font-size: 2rem;
+    background-color: #eddfc8; /* Beige */
+    color: #5c4033;            /* Brown lines */
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-self: flex-end;
+    padding: 8px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 /* Logo and Brand */
 .nav-logo {
     display: flex;
@@ -966,6 +980,47 @@ body {
 }
 
 @media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .hamburger {
+        display: block;
+        align-self: flex-start;
+        margin-bottom: 10px;
+        z-index: 1000;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #5c4033;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        position: static; /* Not absolute */
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu li a {
+        color: #ffffff;
+        font-size: 18px;
+        padding: 12px;
+        width: 100%;
+        display: block;
+        text-align: left;
+        word-break: break-word;
+    }    
+    
     .hero {
         height: 300px;
     }
