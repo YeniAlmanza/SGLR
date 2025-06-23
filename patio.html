@@ -44,69 +44,35 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-        </nav>
-        
+        </nav>        
+
         <main class="gallery-page">
-            <h1>Gallery</h1>
-        
-            <section class="category">
-                <h2>Landscaping</h2>
-                <div class="card-container">
-                    <a href="yards.html" class="card">
-                        <img src="images/yards.jpg" alt="Yards">
-                        <p>Yards</p>
-                    </a>
-                    <a href="plants.html" class="card">
-                        <img src="images/flowers.png" alt="Plants">
-                        <p>Plants/Flowers</p>
-                    </a>
-                    <a href="mulch.html" class="card">
-                        <img src="images/mulch.jpg" alt="Mulch & Rocks">
-                        <p>Mulch & Rocks</p>
-                    </a>
-                </div>
-            </section>
-        
-            <section class="category">
-                <h2>Hardscape</h2>
-                <div class="card-container">
-                    <a href="retaining.html" class="card">
-                        <img src="images/wall1.png" alt="Retaining Wall">
-                        <p>Retaining Wall</p>
-                    </a>
-                    <a href="patio.html" class="card">
-                        <img src="images/patio4.png" alt="Patio">
-                        <p>Patio</p>
-                    </a>
-                </div>
-            </section>
-        
-            <section class="category">
-                <h2>Remodeling</h2>
-                <div class="card-container">
-                    <a href="outdoor.html" class="card">
-                        <img src="images/outdoor.jpg" alt="Outdoor">
-                        <p>Outdoor</p>
-                    </a>
-                    <a href="kitchen.html" class="card">
-                        <img src="images/kitchen.jpg" alt="Kitchen, Decking, etc.">
-                        <p>Kitchen, Decking, etc.</p>
-                    </a>
-                    <a href="bath.html" class="card">
-                        <img src="images/bath.jpg" alt="Bath">
-                        <p>Bath</p>
-                    </a>
-                    <a href="rooms.html" class="card">
-                        <img src="images/rooms.jpg" alt="Rooms">
-                        <p>Rooms</p>
-                    </a>
-                </div>
-            </section>
+            <a href="gallery.html" class="back-button">← Back to Gallery</a>
+            <!-- Images -->
+            <div class="image-gallery">
+                <img src="images/patio1.png" alt="Patio 1" class="clickable-image">
+                <img src="images/patio2.png" alt="Patio 2" class="clickable-image">
+                <img src="images/patio3.png" alt="Patio 3" class="clickable-image">
+                <img src="images/patio4.png" alt="Patio 4" class="clickable-image">
+                <img src="images/patio5.png" alt="Patio 5" class="clickable-image">
+                <img src="images/patio6.png" alt="Patio 6" class="clickable-image">
+                <img src="images/patio7.png" alt="Patio 7" class="clickable-image">
+                <img src="images/patio8.png" alt="Patio 8" class="clickable-image">
+                <img src="images/patio9.png" alt="Patio 9" class="clickable-image">
+                <img src="images/patio10.png" alt="Patio 10" class="clickable-image">
+            </div>
+            <!-- Modal for Fullscreen View -->
+            <div id="imageModal" class="modal">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
         </main>        
         
         <footer class="site-footer">
             <p>&copy; 2025 Shar'on Garden Landscaping and Renovations. All rights reserved.</p>
         </footer>
-        <script src="scripts/script.js"></script>       
+        <script src="scripts/zoom.js"></script>
+        <script src="scripts/script.js"></script>      
     </body>
 </html>
