@@ -931,6 +931,121 @@ body {
     font-size: 14px;
 }
 
+/* === Contact Page === */
+.contact-page {
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-page h1 {
+    text-align: center;
+    font-family: 'DM Serif Text', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #5c4033;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #1d8742;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Form Section */
+.contact-form-section {
+    max-width: 650px;
+    margin: auto;
+    background-color: #f9f5f0;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 20px;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.contact-form-section input:focus,
+.contact-form-section textarea:focus {
+    outline: none;
+    border-color: #1d8742;
+}
+
+.contact-form-section button {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 14px;
+    background-color: #1d8742;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-section button:hover {
+    background-color: #166c35;
+}
+
+/* === Confirmation === */
+.confirmation-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 20px 0;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 /* === Responsive Design === */
 @media (max-width: 900px) {
     .home-columns,
