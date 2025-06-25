@@ -61,9 +61,18 @@
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
         
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com" required>
-        
+                <div class="email-wrapper">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="off">
+                    <div id="suggestions" class="email-suggestions"></div>
+                  </div>
+                <datalist id="email-suggestions">
+                    <option value="gmail.com">
+                    <option value="yahoo.com">
+                    <option value="icloud.com">
+                    <option value="aol.com">
+                </datalist>
+
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" placeholder="(123)-456-7890" required>
         
@@ -81,6 +90,8 @@
         <footer class="site-footer">
             <p>&copy; 2025 Shar'on Garden Landscaping and Renovations. All rights reserved.</p>
         </footer>
-        <script src="scripts/script.js"></script>
+        
+        <script src="scripts/phone.js"></script>
+        <script src="scripts/email.js"></script>
     </body>
 </html>

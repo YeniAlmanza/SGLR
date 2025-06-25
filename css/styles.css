@@ -920,17 +920,6 @@ body {
     color: #ccc;
 }
 
-  
-
-/* === Footer === */
-.site-footer {
-    background-color: #5c4033;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 14px;
-}
-
 /* === Contact Page === */
 .contact-page {
     padding: 40px 20px;
@@ -963,6 +952,37 @@ body {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+/* Email */
+.email-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.email-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+}
+
+.email-suggestions div {
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.email-suggestions div:hover {
+    background-color: #f0f0f0;
 }
 
 /* Form Section */
@@ -1017,6 +1037,15 @@ body {
 
 .contact-form-section button:hover {
     background-color: #166c35;
+}
+
+/* === Footer === */
+.site-footer {
+    background-color: #5c4033;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
 }
 
 /* === Responsive Design === */
@@ -1233,7 +1262,7 @@ body {
     }
 
     .card p {
-        font-size: 0.95rem;
+        font-size: 24px;
     }
 
     .image-gallery {
