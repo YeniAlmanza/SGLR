@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rooms | SGLR</title>
+        <link rel="icon" href="images/sglr.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- Message Bar -->
+        <div class="message-bar">
+            CALL US FOR A FREE QUOTE: <a href="tel:4044884892">(404)-488-4892</a>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            
+            <!-- Hamburger icon for mobile -->
+            <button class="hamburger" id="hamburger">&#9776;</button>
+
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/sglr.png" alt="SGLR Logo">
+                </a>
+                <div class="brand-name">
+                    <span class="main-name">SHAR'ON GARDEN</span><br>
+                    <span class="sub-name">Landscaping & Renovation</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>        
+
+        <main class="gallery-page">
+            <a href="gallery.html" class="back-button">← Back to Gallery</a>
+            <!-- Images -->
+            <div class="image-gallery">
+                <img src="images/patio1.png" alt="Patio 1" class="clickable-image">
+                <img src="images/patio2.png" alt="Patio 2" class="clickable-image">
+            </div>
+            <!-- Modal for Fullscreen View -->
+            <div id="imageModal" class="modal">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
+        </main>        
+        
+        <footer class="site-footer">
+            <p>&copy; 2025 Shar'on Garden Landscaping and Renovations. All rights reserved.</p>
+        </footer>
+        <script src="scripts/zoom.js"></script>
+        <script src="scripts/script.js"></script>      
+    </body>
+</html>
