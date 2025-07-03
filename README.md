@@ -1,3 +1,3 @@
 SGLR
 
-A basic wensite for a small renovation company.
+A basic website for a small renovation company.
