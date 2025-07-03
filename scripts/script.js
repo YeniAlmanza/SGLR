@@ -87,9 +87,9 @@ document.querySelectorAll('.image-slider').forEach(slider => {
     if (window.innerWidth <= 600) {
       cardsPerScroll = 1; // mobile
     } else if (window.innerWidth <= 900) {
-      cardsPerScroll = 3; // tablet/small laptop
+      cardsPerScroll = 2; // tablet/small laptop
     } else {
-      cardsPerScroll = 5; // desktop
+      cardsPerScroll = 4; // desktop
     }
   
     const scrollAmount = cardWidth * cardsPerScroll;
