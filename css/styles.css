@@ -66,7 +66,7 @@ body {
     cursor: pointer;
     display: none;
     align-self: flex-end;
-    padding: 8px 15px;
+    padding: 5px 10px;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -1141,7 +1141,7 @@ body {
     .hamburger {
         display: block;
         align-self: flex-start;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         z-index: 1000;
     }
     
@@ -1152,7 +1152,7 @@ body {
         width: 100%;
         padding: 1rem;
         box-sizing: border-box;
-        position: static; /* Not absolute */
+        position: static;
     }
     
     .nav-menu.active {
@@ -1172,7 +1172,9 @@ body {
         text-align: left;
         word-break: break-word;
     }    
-    
+    .brand-name .main-name {
+        font-size: 38px; 
+    }
     .hero {
         height: 300px;
     }
