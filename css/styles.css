@@ -783,6 +783,19 @@ body {
     margin-bottom: 40px;
 }
 
+.gallery-page h2 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 30px;
+    margin: 10px;
+    color: #5c4033;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .category {
     margin-bottom: 50px;
 }
