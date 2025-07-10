@@ -25,6 +25,7 @@ body {
     background-attachment: fixed;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 
